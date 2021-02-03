@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- This would be an awesome place to link to bootstrap...just sayin... -->
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
 
   <link rel="stylesheet" href="/static/profile.css">
   <script src="http://code.jquery.com/jquery.js"></script>
@@ -17,7 +18,7 @@
 
 <div id="profile">
   <h2>Customer Survey</h2>
-  <form id="profile-form" method="POST">
+  <form action="/api/profile" id="profile-form" method="POST">
     <div>
       <label>Name: </label>
       <input class="form-control" type="text" name="name" id="name-field"
@@ -35,7 +36,7 @@
     </div>
     <div>
       <label>Salary: </label>
-      <select name="salary">
+      <select name="salary" id="salary-field">
         <option value="25-50k">$25,000 - 50,000</option>
         <option value="50-75k">$50,000 - 75,000</option>
         <option value="75-100k">$75,000 - 150,000</option>
@@ -43,7 +44,7 @@
     </div>
     <div>
       <label>Education Level: </label>
-      <select name="education">
+      <select name="education" id="education-field">
         <option value="High school">High School</option>
         <option value="College">College</option>
         <option value="Starfleet Academy">Starfleet Academy</option>
@@ -56,18 +57,18 @@
     </div>
     <div>
       <label>City type: </label>
-      <input type="checkbox" name="city" value="rural"> Rural
-      <input type="checkbox" name="city" value="suburban"> Suburban
-      <input type="checkbox" name="city" value="urban"> Urban
+      <input type="checkbox" id="city-field" name="city" value="rural"> Rural
+      <input type="checkbox" id="city-field" name="city" value="suburban"> Suburban
+      <input type="checkbox" id="city-field" name="city" value="urban"> Urban
     </div>
     <div>
       <label>Do you garden? </label>
-      <input type="radio" name="garden" value="yes">Yes
-      <input type="radio" name="garden" value="no">No
+      <input type="radio" id="garden-field" name="garden" value="yes">Yes
+      <input type="radio" id="garden-field" name="garden" value="no">No
     </div>
     <div>
       <label>How many hours of TV do you watch? </label>
-      <select name="tv">
+      <select name="tv" id="tv-field">
         <option value="none">none</option>
         <option value="1-5">1 - 5 hours</option>
         <option value="5-10">5 - 10 hours</option>
